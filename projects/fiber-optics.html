@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiber Optic Communication &amp; Splicing | Boniface Sankwa</title>
+<meta name="description" content="Practical telecommunications project on fiber optic communication, installation concepts and fiber splicing, by Eng. Boniface Sankwa.">
+<link rel="canonical" href="https://bonifacesankwa.github.io/projects/fiber-optics.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fiber Optic Communication & Splicing">
+<meta property="og:description" content="A practical telecommunications project focused on fiber optic communication, installation concepts and fiber splicing.">
+<meta property="og:image" content="../assets/images/fiber-optics.jpg">
+<link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .project-page-hero { padding-top: calc(var(--nav-h) + 3rem); }
+  .project-page-hero img { border-radius: var(--radius-m); border: 1px solid var(--line); width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .back-link { display:inline-flex; align-items:center; gap:0.5rem; color: var(--teal); font-size:0.9rem; margin-bottom:1.5rem; }
+  .meta-row { display:flex; flex-wrap:wrap; gap:0.6rem; margin: 1.2rem 0 1.8rem; }
+  .meta-row span { font-family: var(--font-mono); font-size:0.78rem; color:var(--ink-2); border:1px solid var(--line); border-radius:999px; padding:0.35rem 0.9rem; }
+  .prose h2 { font-size: 1.3rem; margin: 2.2rem 0 0.8rem; }
+  .prose p, .prose li { color: var(--ink-2); font-size:1rem; margin-bottom:0.7rem; }
+  .prose ul { padding-left: 1.2rem; list-style: disc; }
+  .tech-block { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.5rem;}
+  .tech-block span { font-family: var(--font-mono); font-size:0.78rem; color:var(--teal); border:1px solid var(--teal-dim); border-radius: var(--radius-s); padding:0.3rem 0.7rem; background: rgba(0,217,192,0.05); }
+</style>
+</head>
+<body>
+<canvas id="signal-canvas" aria-hidden="true"></canvas>
+
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html" class="brand" aria-label="BS Telecom — home">
+      <span class="brand-mark"><i class="fa-solid fa-diagram-project"></i></span>
+      <span>BS <span class="brand-sep">|</span> <span class="brand-sub">TELECOM</span></span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a href="../index.html#contact" class="nav-cta">Let's talk</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="project-page-hero">
+    <div class="container" style="max-width: 860px;">
+      <a href="../index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+      <span class="section-index">Telecommunications / Fiber Optics</span>
+      <h1 style="font-size:clamp(1.7rem,4vw,2.4rem); margin-top:0.6rem;">Fiber Optic Communication &amp; Splicing</h1>
+      <div class="meta-row">
+        <span><i class="fa-solid fa-layer-group"></i> Practical Training</span>
+        <span><i class="fa-solid fa-calendar"></i> Field Project</span>
+      </div>
+      <img src="../assets/images/fiber-optics.jpg" alt="Abstract illustration of fiber optic strands carrying light pulses" width="900" height="506">
+
+      <div class="prose">
+        <h2>Overview</h2>
+        <p>A practical telecommunications project focused on fiber optic communication, installation concepts and fiber splicing — core skills for anyone working with modern optical transmission infrastructure.</p>
+
+        <h2>Areas Covered</h2>
+        <ul>
+          <li>Fundamentals of how optical fiber carries signals as light pulses over long distances with low loss.</li>
+          <li>Installation concepts for running and terminating fiber optic cable in real environments.</li>
+          <li>Hands-on fiber splicing technique, joining fiber strands to maintain signal integrity.</li>
+          <li>Approaches to identifying and troubleshooting faults in a fiber optic link.</li>
+        </ul>
+
+        <h2>Relevance</h2>
+        <p>Fiber optics underpins most modern high-capacity telecommunications infrastructure, from backbone networks to last-mile connectivity. Practical exposure to installation and splicing builds a foundation for supporting and maintaining this infrastructure in the field.</p>
+
+        <h2>Technologies Used</h2>
+        <div class="tech-block">
+          <span>Fiber Optics</span><span>Fiber Splicing</span><span>Optical Communication</span><span>Network Infrastructure</span>
+        </div>
+      </div>
+     <a href="../documents/fiber-optics-report.pdf" class="btn btn-outline" download style="margin-bottom:1.8rem;"><i class="fa-solid fa-file-arrow-down"></i> View Document</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Eng. Boniface Sankwa. All Rights Reserved.</p>
+      <a href="../index.html#projects" style="color:var(--teal);">All Projects</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="../js/main.js"></script>
+</body>
+</html>

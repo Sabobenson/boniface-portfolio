@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explainable AI Model for Pulmonary Edema Detection | Boniface Sankwa</title>
+<meta name="description" content="AI-based detection of pulmonary edema from chest X-ray images with explainable predictions, by Eng. Boniface Sankwa.">
+<link rel="canonical" href="https://bonifacesankwa.github.io/projects/pulmoxai.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Explainable AI Model for Pulmonary Edema Detection">
+<meta property="og:description" content="AI-based project detecting pulmonary edema from chest X-ray images with explainable predictions using XAI techniques.">
+<meta property="og:image" content="../assets/images/pulmoxai.png">
+<link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .project-page-hero { padding-top: calc(var(--nav-h) + 3rem); }
+  .project-page-hero img { border-radius: var(--radius-m); border: 1px solid var(--line); width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .back-link { display:inline-flex; align-items:center; gap:0.5rem; color: var(--teal); font-size:0.9rem; margin-bottom:1.5rem; }
+  .meta-row { display:flex; flex-wrap:wrap; gap:0.6rem; margin: 1.2rem 0 1.8rem; }
+  .meta-row span { font-family: var(--font-mono); font-size:0.78rem; color:var(--ink-2); border:1px solid var(--line); border-radius:999px; padding:0.35rem 0.9rem; }
+  .prose h2 { font-size: 1.3rem; margin: 2.2rem 0 0.8rem; }
+  .prose p, .prose li { color: var(--ink-2); font-size:1rem; margin-bottom:0.7rem; }
+  .prose ul { padding-left: 1.2rem; list-style: disc; }
+  .tech-block { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.5rem;}
+  .tech-block span { font-family: var(--font-mono); font-size:0.78rem; color:var(--teal); border:1px solid var(--teal-dim); border-radius: var(--radius-s); padding:0.3rem 0.7rem; background: rgba(0,217,192,0.05); }
+  .note-box { border-left: 3px solid var(--amber); background: rgba(255,180,84,0.06); padding: 1rem 1.2rem; border-radius: 0 var(--radius-s) var(--radius-s) 0; font-size:0.92rem; color: var(--ink-2); margin-top: 1.5rem; }
+</style>
+</head>
+<body>
+<canvas id="signal-canvas" aria-hidden="true"></canvas>
+
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html" class="brand" aria-label="BS Telecom — home">
+      <span class="brand-mark"><i class="fa-solid fa-diagram-project"></i></span>
+      <span>BS <span class="brand-sep">|</span> <span class="brand-sub">TELECOM</span></span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a href="../index.html#contact" class="nav-cta">Let's talk</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="project-page-hero">
+    <div class="container" style="max-width: 860px;">
+      <a href="../index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+      <span class="section-index">Artificial Intelligence / Healthcare</span>
+      <h1 style="font-size:clamp(1.7rem,4vw,2.4rem); margin-top:0.6rem;">Explainable AI Model for Pulmonary Edema Detection</h1>
+      <div class="meta-row">
+        <span><i class="fa-solid fa-layer-group"></i> Deep Learning</span>
+        <span><i class="fa-solid fa-calendar"></i> Academic Project</span>
+      </div>
+      <img src="../assets/images/pulmoxai.png" alt="Abstract visualization of an explainable AI heatmap overlaid on a chest scan outline" width="900" height="506">
+
+      <div class="prose">
+        <h2>Overview</h2>
+        <p>An AI-based project for detecting pulmonary edema from chest X-ray images and providing explainable predictions using Explainable AI (XAI) techniques. The goal was not only to classify images accurately, but to make the model's reasoning visible and interpretable.</p>
+
+        <h2>Approach</h2>
+        <ul>
+          <li>Built and trained a deep learning classifier on chest X-ray image data using TensorFlow/Keras.</li>
+          <li>Used a DenseNet121-based convolutional architecture for feature extraction and classification.</li>
+          <li>Applied Grad-CAM to generate visual explanations highlighting the image regions that most influenced each prediction.</li>
+          <li>Evaluated the model's classification performance alongside the interpretability of its explanations.</li>
+        </ul>
+
+        <h2>Why Explainability Matters</h2>
+        <p>In a healthcare context, a prediction alone is not enough — clinicians need to understand why a model reached a conclusion. Explainable AI techniques such as Grad-CAM make it possible to visualize which regions of an X-ray influenced the model's output, supporting trust and clinical review rather than treating the model as a black box.</p>
+
+        <h2>Technologies Used</h2>
+        <div class="tech-block">
+          <span>Python</span><span>TensorFlow/Keras</span><span>DenseNet121</span><span>Machine Learning</span><span>Deep Learning</span><span>Explainable AI</span><span>Grad-CAM</span><span>Chest X-ray Classification</span>
+        </div>
+      <a href="../documents/pulmoxai-report.pdf" class="btn btn-outline" download style="margin-bottom:1.8rem;"><i class="fa-solid fa-file-arrow-down"></i> View Document</a>
+        <div class="note-box"><i class="fa-solid fa-circle-info"></i>&nbsp; This project is academic/research work and is not a certified medical diagnostic tool.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Eng. Boniface Sankwa. All Rights Reserved.</p>
+      <a href="../index.html#projects" style="color:var(--teal);">All Projects</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="../js/main.js"></script>
+</body>
+</html>

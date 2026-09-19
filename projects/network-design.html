@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Office Network Design with VLAN, DHCP &amp; Internet Access | Boniface Sankwa</title>
+<meta name="description" content="Design and simulation of an office network implementing VLANs, DHCP, routing and Internet connectivity, by Eng. Boniface Sankwa.">
+<link rel="canonical" href="https://bonifacesankwa.github.io/projects/network-design.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office Network Design with VLAN, DHCP & Internet Access">
+<meta property="og:description" content="Design and simulation of an office network implementing VLANs, DHCP, routing and Internet connectivity.">
+<meta property="og:image" content="../assets/images/network-project.jpg">
+<link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .project-page-hero { padding-top: calc(var(--nav-h) + 3rem); }
+  .project-page-hero img { border-radius: var(--radius-m); border: 1px solid var(--line); width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .back-link { display:inline-flex; align-items:center; gap:0.5rem; color: var(--teal); font-size:0.9rem; margin-bottom:1.5rem; }
+  .meta-row { display:flex; flex-wrap:wrap; gap:0.6rem; margin: 1.2rem 0 1.8rem; }
+  .meta-row span { font-family: var(--font-mono); font-size:0.78rem; color:var(--ink-2); border:1px solid var(--line); border-radius:999px; padding:0.35rem 0.9rem; }
+  .prose h2 { font-size: 1.3rem; margin: 2.2rem 0 0.8rem; }
+  .prose p, .prose li { color: var(--ink-2); font-size:1rem; margin-bottom:0.7rem; }
+  .prose ul { padding-left: 1.2rem; list-style: disc; }
+  .tech-block { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.5rem;}
+  .tech-block span { font-family: var(--font-mono); font-size:0.78rem; color:var(--teal); border:1px solid var(--teal-dim); border-radius: var(--radius-s); padding:0.3rem 0.7rem; background: rgba(0,217,192,0.05); }
+</style>
+</head>
+<body>
+<canvas id="signal-canvas" aria-hidden="true"></canvas>
+
+<header class="navbar">
+  <div class="container">
+    <a href="../index.html" class="brand" aria-label="BS Telecom — home">
+      <span class="brand-mark"><i class="fa-solid fa-diagram-project"></i></span>
+      <span>BS <span class="brand-sep">|</span> <span class="brand-sub">TELECOM</span></span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a href="../index.html#contact" class="nav-cta">Let's talk</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="project-page-hero">
+    <div class="container" style="max-width: 860px;">
+      <a href="../index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+      <span class="section-index">Computer Networking</span>
+      <h1 style="font-size:clamp(1.7rem,4vw,2.4rem); margin-top:0.6rem;">Office Network Design with VLAN, DHCP &amp; Internet Access</h1>
+      <div class="meta-row">
+        <span><i class="fa-solid fa-layer-group"></i> Cisco Packet Tracer</span>
+        <span><i class="fa-solid fa-calendar"></i> Academic Project</span>
+      </div>
+      <img src="../assets/images/network-project.jpg" alt="Diagram of an office network topology with VLANs, DHCP and a core switch" width="900" height="506">
+
+      <div class="prose">
+        <h2>Overview</h2>
+        <p>This project is a design and simulation of an office network implementing VLANs, DHCP, routing and Internet connectivity. It reflects a typical small-to-medium office environment where multiple departments need isolated, well-managed network segments that still share a common path to the Internet.</p>
+
+        <h2>Design Approach</h2>
+        <ul>
+          <li>Segmented the office into separate VLANs by department to isolate broadcast traffic and improve security.</li>
+          <li>Configured a DHCP service to automatically assign IP addresses to end devices within each VLAN.</li>
+          <li>Implemented inter-VLAN routing so devices in different departments could communicate where required.</li>
+          <li>Planned an IP addressing scheme to avoid overlap and allow for future growth.</li>
+          <li>Connected the internal network to an Internet-facing router to provide external connectivity.</li>
+        </ul>
+
+        <h2>Outcome</h2>
+        <p>The simulated network demonstrates a working, segmented office topology where devices receive addresses automatically, departmental traffic stays logically separated, and all segments retain reliable access to internal resources and the Internet.</p>
+
+        <h2>Technologies Used</h2>
+        <div class="tech-block">
+          <span>Cisco Packet Tracer</span><span>VLAN</span><span>DHCP</span><span>Routing</span><span>IP Addressing</span><span>Network Design</span>
+        </div>
+      </div>
+      <a href="../documents/network-design-report.pdf" class="btn btn-outline" download style="margin-bottom:1.8rem;"><i class="fa-solid fa-file-arrow-down"></i> View Document</a>      
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Eng. Boniface Sankwa. All Rights Reserved.</p>
+      <a href="../index.html#projects" style="color:var(--teal);">All Projects</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="../js/main.js"></script>
+</body>
+</html>
