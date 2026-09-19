@@ -221,8 +221,10 @@ function initProjectModal() {
 
   document.querySelectorAll("[data-project-id]").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
+      const projectId = trigger.dataset.projectId;
+      if (!PROJECT_DATA[projectId]) return;
       e.preventDefault();
-      openModal(trigger.dataset.projectId);
+      openModal(projectId);
     });
   });
 
