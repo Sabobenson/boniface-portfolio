@@ -1001,7 +1001,7 @@ textarea { resize: vertical; min-height: 130px; }
   margin: 0;
   overflow: hidden;
   border-radius: 14px;
-  background: var(--card-bg, #141414);
+  background: var(--card-bg,rgba(5, 9, 17, 0.78));
 }
 
 .gallery-item img {
